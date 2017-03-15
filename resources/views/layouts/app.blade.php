@@ -15,9 +15,15 @@
     <link href="{{ asset('css/design.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 
+
+    <!-- scripts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Marcellus+SC|Overlock|Rancho" rel="stylesheet">
+
     <!-- Scripts -->
     <script src="{{asset('js/jquery-3.1.1.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -56,8 +62,12 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
                         @else
+
+                            <a href="{{route('cart')}}" ><img id="shop_cart" src="/images/cart.png">
+                                <span class="badge" >{{Session::has('cart') ? Session::get('cart')->totalQty : ''}}</span>
+                            </a>
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
