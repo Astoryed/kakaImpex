@@ -2,15 +2,23 @@
 
 @section('content')
 
-    <div id="product-bar">
-        <a href="{{ route('home')}} ">Login</a>
+    <div id="login-bar">
 
     </div>
 
-    <div id="welcome" class="animated fadeIn">WELCOME TO KAKAIMPEX</div>
+    <div id="welcome" class="animated fadeIn">
+        <img src="\img\cargo.jpg">
 
-    <div id="cart-box">
-        <h3>info@kakimpex.com</h3>
+    </div>
+
+    <div id="welcome-note">
+
+        <h1>WELCOME TO KAKAIMPEX</h1><br>
+
+    <a href="{{route('home')}}" ><button id="login">Login</button></a>
+
+
+        <h3>info@kakaimpex.com</h3>
         <h3>0336-0356729</h3>
     </div>
 

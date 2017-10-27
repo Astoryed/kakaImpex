@@ -10,22 +10,21 @@
     <div id="contact">
         <h1>Contact</h1><br>
         <div>
-            Kakaimpex INDUSTRIES.<br>
+            Kaka Impex INDUSTRIES.<br>
 
             # 1517, Ward no 6,<br>
             Saddar Bazar,Cantt<br>
             Sialkot,Punjab<br>
             Pakistan<br><br>
 
+            CELL:   0335-0356729<br>
+            CELL:   0344-6376356<br><br>
 
-            TEL:    +92 52 42910816<br>
-            CELL:   +92 300 6191080<br>
-            CELL:   +92 315 6191212<br>
-            FAX:    +92 52 42726155<br>
+            WhatsApp: 0331-1398992<br><br>
 
-
-            E-Mails:kakaimpex.Comsats.Net.Pk<br>
-            E-Mails:Kakaimpex@Gmail.Com<br>
+            E-Mails: info@kakaimpex.com<br>
+            E-Mails: sales01@kakaimpex.com <br>
+            E-Mails: sales02@kakaimpex.com<br>
 
         </div>
         <!-- Add Google Maps -->

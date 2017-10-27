@@ -8,7 +8,11 @@
 
 /* STRATTERS */
 
-    /************************************************************** TAB ******************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+/***********************************************      TAB        ****************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
 @media (max-width: 1024px)
 {
 	body 
@@ -20,55 +24,82 @@
 		background-color:  #ffffff;	
 		font-family: 'audimat', Fallback, sans-serif;
 	}
-	
+    /* WELCOME PAGE */
+    #welcome img
+    {
+        width: 100%;
+    }
+
+    #login-bar{
+        height:50px;
+        background-color: #EBEBEB;
+        margin: 20px 0 0px 0;
+        padding: 18px 0px 0px 250px;
+    }
+
+    #login{
+        text-align: center;
+        background-color:#0CC;
+        opacity: 0.5;
+        width: 33%;
+        height: 50px;
+    }
+
+    #login-panel{
+        background-image: url("/img/cargo.jpg");
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+    }
+
+    #login:hover
+    {
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
+
+    #welcome-note{
+        margin: 100px 0px 0px 330px;
+    }
+
 	/* HEADER */
-	
+
 	header
 	{
 		width:100%;
 		height:auto;
 	}
-	nav
-	{
-		background-color:rgba(255,255,255,0.6);
-		width:100%;
-	}
 
     #logo-main
     {
-		margin: 8px;
-		height: 30px;
+		margin: 10px 0px 0px 46px;
+		height: 40px;
     }
-	
-	nav ul
-	{
-		color:#fff;
-		margin:0;
-		padding:0;
-		text-align:center;
-		transition: max-height:0.5;
-		display:none;
-	}
-	
-	#flash ul li
-	{
-		display:none;
-	}
-	
-	nav ul.show
-	{
-		max-height:20em;
-	}
-	
-	nav ul li
-	{
-		padding:20px;
-	}
-	
+
+    nav li{
+        list-style: none;
+        padding: 10px;
+    }
+
 	nav ul li:hover
 	{
 		background-color:#EBEBEB;
 	}
+
+    #flash1 ul
+    {
+        display: none;
+    }
+
+    #flash ul
+    {
+        display: none;
+    }
 	.nav-btn
 	{
         display:inline;
@@ -79,31 +110,38 @@
         border-radius: 3px;
 	}
 
-	/* USERNAME BAR */
+    .dropdown-menu {
+         position: absolute;
+         top: 23%;
+         left: 50px;
+     }
+
+    #nav-close{
+        background-color: white;
+        color: black;
+        border: none;
+    }
+
+    #mySidebar{
+        width: 300px;
+    }
+    /* USERNAME BAR */
 
 	#login-navbar{
 		height: 50px;
 		text-align: center;
 		font-size: 24px;
 	}
-	
-    /* SLIDE */
 
-	 button
+    /* MAIN SLIDER */
+
+    button
     {
         padding: 10px;
         border-radius: 6px;
         background-color: #3498db;
         color: white;
-	}
-
-	.dropdown-menu {
-		position: fixed;
-		top: 73%;
-		left: 230px;
-	}
-
-    /* MAIN SLIDER */
+    }
 
     #owl-demo .item1 .item2 .item3
     {
@@ -129,15 +167,6 @@
         padding: 0 50px 0 50px;
     }
 
-
-
-    button
-    {
-        padding: 10px;
-        border-radius: 3px;
-        background-color: #3498db;
-        color: white;
-    }
 
 	 /* FEATURED PRODUCTS CELL */
 	 
@@ -338,6 +367,11 @@
 		float:left;
 		width: 80%;
 	}
+    #social-icons img
+    {
+        height: 40px;
+        width: 130px;
+    }
 
     /*-------------------------------------*/
 	/*-----------Product page--------------*/
@@ -380,10 +414,57 @@
     {
         background-color:#EBEBEB;
         margin-bottom:30px;
+        width: 200px;
     }
     #jumble img
     {
         width: 100%;
+    }
+
+    /*-------------------------------------*/
+    /*-----------Printing page-------------*/
+    /*-------------------------------------*/
+    #printing-boxes{
+        display: inline-block;
+        margin: 3%;
+
+    }
+
+    #each-box{
+        text-align: center;
+        margin: 40px;
+        padding: 15px;
+        min-width: 180px;
+        max-width: 300px;
+        height: 300px;
+        background-color: #EBEBEB;
+    }
+
+    #each-box img {
+        padding: 10%;
+    }
+
+    /*-------------------------------------*/
+    /*-----------Embroidery page-----------*/
+    /*-------------------------------------*/
+    #embro{
+        margin: 5% 10% 5% 5%;
+        text-align: justify;
+    }
+
+    #embro-box{
+        margin: 5% 10% 5% 10%;
+    }
+    #small-box{
+        display: inline-block;
+        text-align: center;
+        margin: 2%;
+        padding: 5%;
+        min-width: 30%;
+        background-color: #EBEBEB;
+    }
+    #small-box:hover{
+        background-color:rgba(255,255,255,0.6);
     }
 
     /*-------------------------------------*/
@@ -393,13 +474,13 @@
     {
         height:50px;
         background-color: #EBEBEB;
-        margin: 0px 0 30px 0;
+        margin: 10px 0 30px 0;
         padding: 1% 0px 1% 20%;
     }
     #detail-sec
     {
         height:860px;
-        margin: 0px 100px 30px 0px;
+        margin: 0px 0px 50px 0px;
         padding: 1% 0px 1% 8%;
     }
 
@@ -427,17 +508,17 @@
     #adjust-btns
     {
         float: left;
-        margin-left: 30px;
+        margin-left: 6px;
     }
     .dec-btn
     {
         height: 50px;
         width: 50px;
-        background: #ffffff;
+        background-image: url('/img/sub-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         border:1px solid #CCC;
-        text-align:center;
-        color: #0f0f0f;
-        padding: 1px;
         margin-right: -4px;
     }
 
@@ -445,11 +526,11 @@
     {
         height: 50px;
         width: 50px;
-        background: #ffffff;
+        background-image: url('/img/add-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         border:1px solid #CCC;
-        text-align:center;
-        color: #0f0f0f;
-        padding: 1px;
         margin-left: -4px;
         border-left-color: #0CC;
     }
@@ -504,30 +585,119 @@
 
 
     /*-----------------------------------*/
-	/*-----------Cart page--------------*/
-	/*---------------------------------*/
-	#cart-box
-	{
-		margin:50px;
-	}
+    /*-----------Cart page--------------*/
+    /*---------------------------------*/
+    #cart-box
+    {
+        margin:200px 0px 0px 50px;
+    }
 
-	/*--------------------------------------*/
-	/*-----------Conatct page--------------*/
+    #all_accordion{
+        margin: 10px;
+    }
+
+    button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    button.accordion.active, button.accordion:hover {
+        background-color: #ddd;
+    }
+
+    button.accordion:after {
+        content: "\00BB";
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    button.accordion.active:after {
+        content: "\2212";
+    }
+
+    div.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    #clearCart{
+        width: 130px;
+        height: 50px;
+        margin: 10px;
+    }
+    #proceed{
+        width: 140px;
+        height: 50px;
+        float: right;
+        background-color:#0CC;
+        color:#ffffff;
+        border:1px solid #CCC;
+        text-align:center;
+        padding: 15px;
+        opacity: 0.5;
+        margin-top: 10px;
+    }
+
+    #proceed:hover{
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
+    #success{
+        padding: 15px;
+        font-size: 20px;
+        margin: 10%;
+    }
+
+    /*--------------------------------------*/
+    /*-----------Checkout page-------------*/
+    /*------------------------------------*/
+    #checkout
+    {
+        margin:5%;
+        height: 800px;
+
+    }
+
+    #checkout_error
+    {
+        margin: 30%;
+        float: none;
+    }
+
+    #checkout_page
+    {
+        padding: 10%;
+    }
+
+    /*--------------------------------------*/
+	/*-----------Contact page--------------*/
 	/*------------------------------------*/
 	#contact
 	{
-		margin:50px;
+        margin: 300px 100px 0 30px;
 
 	}
 	#send-btn
 	{
 	    height: 50px;
-		width: 100px;
+		width: 120px;
 		background-color: #0CC;
 		color: #ffffff;
 		border: 1px solid #CCC;
 		opacity: 0.5;
-		float:right;
 	}
 	#send-btn:hover
 	{
@@ -545,8 +715,12 @@
 
 }
 
-    
-	/***************************************************** Mobile **********************************************/
+
+/********************************************************************************************************/
+/********************************************************************************************************/
+/**********************************************         Mobile       ************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
 @media (max-width: 400px)
 {
 	body 
@@ -558,72 +732,100 @@
 		background-color: #ffffff ;	
 		font-family: 'audimat', Fallback, sans-serif;
 	}
-
-	/* HEADER */
-	
-	#logo-main
-    {
-		margin: 7px;
-		height: 28px;
+    /* WELCOME PAGE */
+    #welcome img{
+        width: 100%;
     }
-	
-	nav
-	{
-		background-color:rgba(255,255,255,0.6);
-		width:100%;
-		min-width:330px;
-	}
-	
-	nav ul
-	{
-		width:100%;
-		transition: max-height:0.5;
-		display:none;
-	}
-	
-	nav ul.show
-	{
-		max-height:20em;
-	}
-	
-	nav ul li
-	{
-		box-sizing:border-box;
-		width:100%;
-		padding:15px;
-	}
-	
-	nav ul li:hover
-	{
-		background-color:#EBEBEB;
-	}
-	
-	.nav-btn
-	{
-		display:inline; 
-		float: right;
-		margin: 5px 80px 0px 0px;
-        background-color: #000000;
-        border: none;
-        border-radius: 3px;
-	}
+    #login-bar{
+        height:50px;
+        background-color: #EBEBEB;
+        margin: 20px 0 0px 0;
+        padding: 18px 0px 0px 250px;
+    }
+    #login-panel{
+        background-image: url("/img/cargo.jpg");
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+    }
 
-	 /* SLIDE */
+    #login{
+        text-align: center;
+        background-color:#0CC;
+        opacity: 0.5;
+        width: 33%;
+        height: 50px;
+    }
 
-    button
+    #login:hover
     {
-        padding: 10px;
-        border-radius: 6px;
-        background-color: #3498db;
-        color: white;
-	}
-	.dropdown-menu {
-		position:relative;
-		top: 63%;
-		left: 0px;
-	}
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
 
-	/* USERNAME BAR */
+    #welcome-note{
+        text-align: center;
+        margin:0px;
+    }
+
+    /* HEADER */
+
+    header
+    {
+        width:100%;
+        height:auto;
+    }
+
+    #logo-main
+    {
+        margin: 10px 0px 40px 46px;
+        height: 40px;
+    }
+
+    nav li{
+        list-style: none;
+        padding: 10px;
+    }
+
+    nav ul li:hover
+    {
+        background-color:#EBEBEB;
+    }
+
+    #flash1 ul
+    {
+        display: none;
+    }
+
+    #flash ul
+    {
+        display: none;
+    }
+    .nav-btn
+    {
+        display:inline;
+        float: right;
+        margin: 10px 20px 0px 0px;
+        background-color: #000000;
+        border-radius: 3px;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 64%;
+        left: 60px;
+    }
+    #nav-close{
+        background-color: white;
+        color: black;
+        border: none;
+    }
+    /* USERNAME BAR */
 
 	#login-navbar{
 		height: 60px;
@@ -632,6 +834,14 @@
 	}
 
     /* MAIN SLIDER */
+
+    button
+    {
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #3498db;
+        color: white;
+    }
 
     #owl-demo .item1 .item2 .item3
     {
@@ -836,12 +1046,12 @@
 
 	#social-icons i
 	{
-		padding:5px;
+		padding:0px;
 	}
 
 	#social-icons i:hover
 	{
-		padding:5px;
+		padding:2px;
 		color: #3498db;
 	}
 	
@@ -850,16 +1060,20 @@
 	    margin-left: 10%;	
 		display: flex;
 	}
-	
 	#add
 	{
 		background-color: white;
 		margin: 20px;
 		padding:20px;
 		float:left;
-	
 	}
-	
+
+    #social-icons img
+    {
+        height: 40px;
+        width: 120px;
+    }
+
 	/*-------------------------------------*/
 	/*-----------Product page--------------*/
 	/*-------------------------------------*/
@@ -869,6 +1083,7 @@
         background-color: #EBEBEB;
         padding: 4% 0px 1% 20%;
     }
+
     #side-bar
     {
         margin:30px;
@@ -907,6 +1122,52 @@
     }
 
     /*-------------------------------------*/
+    /*-----------Printing page-------------*/
+    /*-------------------------------------*/
+    #printing-boxes{
+        display:inline-block;
+        margin: 3%;
+
+    }
+
+    #each-box{
+        text-align: center;
+        margin: 40px;
+        padding: 5%;
+        min-width: 180px;
+        max-width: 300px;
+        height: 300px;
+        background-color: #EBEBEB;
+    }
+
+    #each-box img {
+        padding: 8%;
+    }
+
+    /*-------------------------------------*/
+    /*-----------Embroidery page-----------*/
+    /*-------------------------------------*/
+    #embro{
+        margin: 5% 10% 5% 5%;
+        text-align: justify;
+    }
+
+    #embro-box{
+        margin: 5% 10% 5% 10%;
+    }
+    #small-box{
+        display: inline-block;
+        text-align: center;
+        margin: 2%;
+        padding: 10%;
+        min-width: 80%;
+        background-color: #EBEBEB;
+    }
+    #small-box:hover{
+        background-color:rgba(255,255,255,0.6);
+    }
+
+    /*-------------------------------------*/
     /*-----------Detail page---------------*/
     /*-------------------------------------*/
 
@@ -914,13 +1175,13 @@
     {
         height:50px;
         background-color: #EBEBEB;
-        margin: 0px 0 30px 0;
+        margin: 10px 0 30px 0;
         padding: 1% 0px 1% 20%;
     }
     #detail-sec
     {
         height:900px;
-        margin: 50px 0px 0px -110px;
+        margin: 50px 0px 50px 10px;
         padding: 1% 0px 1% 5%;
     }
 
@@ -932,7 +1193,7 @@
 
     #detail-text
     {
-        padding: 145% 0 0 0;
+        padding: 100% 0 0 0;
         line-height: 2.1;
     }
 
@@ -952,33 +1213,33 @@
     }
     .dec-btn
     {
-        height: 30px;
-        width: 30px;
-        background: #ffffff;
+        height: 40px;
+        width: 40px;
+        background-image: url('/img/sub-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         border:1px solid #CCC;
-        text-align:center;
-        color: #0f0f0f;
-        padding: 1px;
         margin-right: -4px;
     }
 
     .inc-btn
     {
-        height: 30px;
-        width: 30px;
-        background: #ffffff;
+        height: 40px;
+        width: 40px;
+        background-image: url('/img/add-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
         border:1px solid #CCC;
-        text-align:center;
-        color: #0f0f0f;
-        padding: 1px;
         margin-left: -4px;
         border-left-color: #0CC;
     }
 
     .input-btn
     {
-        height: 30px;
-        width: 60px;
+        height: 40px;
+        width: 75px;
         border:1px solid #0CC;
         background: #ffffff;
         text-align:center;
@@ -1024,45 +1285,115 @@
     }
 
     /*-----------------------------------*/
-	/*-----------Cart page--------------*/
-	/*---------------------------------*/
-	#cart-box
-	{
-		margin:30px;
-	}
+    /*-----------Cart page--------------*/
+    /*---------------------------------*/
+    #cart-box
+    {
+        margin:10px 0px 0px -3px;
+    }
 
-	/*--------------------------------------*/
-	/*-----------Checkout page-------------*/
-	/*------------------------------------*/
-	#checkout
-	{
-		height: 870px;
-	}
+    #all_accordion{
+        margin: 10px;
+    }
 
-	#checkout_error
-	{
-		margin: 65px;
-		float: none;
-	}
+    button.accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
 
-	#checkout_page
-	{
-		padding: 100px;
-	}
+    button.accordion.active, button.accordion:hover {
+        background-color: #ddd;
+    }
 
+    button.accordion:after {
+        content: "\00BB";
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    button.accordion.active:after {
+        content: "\2212";
+    }
+
+    div.panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    #total{
+        margin: 20px;
+    }
+    #clearCart{
+        width: 110px;
+        height: 50px;
+        margin: 10px;
+    }
+    #proceed{
+        width: 100px;
+        height: 50px;
+        background-color:#0CC;
+        color:#ffffff;
+        border:1px solid #CCC;
+        text-align:center;
+        padding: 15px;
+        opacity: 0.5;
+    }
+
+    #proceed:hover{
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
+    #success{
+        padding: 10px;
+        font-size: 15px;
+        margin: 5%;
+    }
+
+    /*--------------------------------------*/
+    /*-----------Checkout page-------------*/
+    /*------------------------------------*/
+    #checkout
+    {
+        height: 900px;
+        margin: 0;
+    }
+
+    #checkout_error
+    {
+        margin: 0px;
+        float: none;
+    }
+
+    #checkout_page
+    {
+        padding: 1%;
+    }
 
 	/*--------------------------------------*/
 	/*-----------Contact page--------------*/
 	/*------------------------------------*/
 	#contact
 	{
-		margin:30px;
+        margin: 130px 0 0 0px;
 
 	}
 	#send-btn
 	{
 	    height: 50px;
-		width: 100px;
+		width: 110px;
 		background-color: #0CC;
 		color: #ffffff;
 		border: 1px solid #CCC;
@@ -1085,7 +1416,12 @@
 
 }	
 
-/****************************************************** DESKTOP *****************************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+/*********************************************         DESKTOP           ********************************/
+/********************************************************************************************************/
+/********************************************************************************************************/
+
 @media (min-width: 1025px)
 {
 
@@ -1113,84 +1449,109 @@
     }
 
     /* WELCOME PAGE */
-    #welcome{
-        background-image: url('/img/cargo4.jpg');
-        background-repeat: no-repeat;
-        font-size: 36px;
-        text-align: right;
-        padding: 80px;
-        height: 500px;
-        color: white;
+    #welcome img
+    {
+       width: 100%;
     }
 
+    #login-bar{
+        height:50px;
+        background-color: #EBEBEB;
+        margin: 20px 0 0px 0;
+        padding: 18px 0px 0px 250px;
+    }
+    #login-panel{
+        background-image: url("/img/cargo.jpg");
+        background-repeat: no-repeat;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+    }
 
-	/* LOGIN PAGE */
+    #login{
+        text-align: center;
+        background-color:#0CC;
+        opacity: 0.5;
+        width: 33%;
+        height: 50px;
+    }
 
-	#login {
-		background-image: url('/img/cargo4.jpg');
-		background-repeat: no-repeat;
-	}
+    #login:hover
+    {
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
 
-	/* HEADER */
+    #welcome-note{
+        text-align: center;
+    }
 
-	header
-	{
+    /* HEADER */
+
+    header
+    {
         position: fixed;
         z-index: 100;
         width: 100%;
         height: auto;
         background-color: rgba(255,255,255,0.6);
-	}
+    }
 
     #logo-main
     {
-        margin: 20px;
-        height: 40px;
-		float:left;
+        margin: 30px 13px 4px 70px;
+        height: 50px;
+        float:left;
     }
-	
-	.nav-btn
-	{
-		display:none;
-	}
 
-   	nav ul
-	{
-		float:right;
-		list-style:none;
-		margin: 10px 60px 0 0;
-	}
-	nav ul ul
-	{
-		display:none;
-	}
-	
-	nav ul li
-	{
-		padding:20px;
-		display:inline-block;
-	}
-	
+    .nav-btn
+    {
+        display:none;
+    }
+    #nav-close{
+        display:none;
+    }
+
+    nav ul
+    {
+        float:right;
+        list-style:none;
+        margin: 10px 60px 0 0;
+    }
+    nav ul ul
+    {
+        display:none;
+    }
+
+    nav ul li
+    {
+        padding:20px;
+        display:inline-block;
+    }
+
     #flash ul
     {
         position: absolute;
         margin: 30px 140px 0px -60px;
     }
-	
-	#flash ul li
-    {
-		background-color: rgba(255,255,255,0.9);
-		width: 80%;
-		text-align:center;
-		line-height: 0.1;
 
-	}
-	
-	#flash ul li:hover
+    #flash ul li
     {
-		background-color: #EBEBEB;
+        background-color: rgba(255,255,255,0.9);
+        width: 80%;
+        text-align:center;
+        line-height: 0.1;
 
-	}
+    }
+
+    #flash ul li:hover
+    {
+        background-color: #EBEBEB;
+    }
 
     #flash1 ul
     {
@@ -1201,11 +1562,10 @@
     #flash1 ul li
     {
         background-color: rgba(255,255,255,0.9);
-		width: 300px;
+        width: 300px;
         margin-left: -5px;
         text-align:center;
         line-height: 0.1;
-
     }
 
     #flash1 ul li:hover
@@ -1218,7 +1578,6 @@
     {
         background-color: #EBEBEB;
     }
-
 	/* USERNAME BAR */
 
 	#login-navbar
@@ -1335,7 +1694,6 @@
 		margin: 10px;
 		float: left;
 		background-color: #EBEBEB;
-
 	}
 	
 	#cell p
@@ -1558,6 +1916,11 @@
 		display:none;
 	}
 
+    #social-icons img
+    {
+        height: 50px;
+        width: 150px;
+    }
     /*-------------------------------------*/
 	/*-----------Product page--------------*/
 	/*-------------------------------------*/
@@ -1565,6 +1928,7 @@
 	{
 		height:50px;
 		background-color: #EBEBEB;
+        margin-top: 10px;
 		padding: 1% 0px 1% 20%;
 	}
 	.productImage
@@ -1583,11 +1947,7 @@
 		padding:10px;
 		border-bottom:1px solid #eee;
 	}
-	.nav
-	{
-		margin:50px 40px 10px 0px;
-	}
-	.nav li
+	#side-bar ul li
 	{
 		border-bottom:1px solid #eee;
 	}
@@ -1609,6 +1969,52 @@
 		float: left;
 	}
 
+    /*-------------------------------------*/
+    /*-----------Printing page-------------*/
+    /*-------------------------------------*/
+
+    #printing-boxes{
+        display: inline-block;
+        margin: 3%;
+
+    }
+
+    #each-box{
+        text-align: center;
+        margin: 40px;
+        padding: 15px;
+        min-width: 180px;
+        max-width: 300px;
+        height: 300px;
+        background-color: #EBEBEB;
+    }
+    #each-box img {
+        padding: 10%;
+    }
+
+    /*-------------------------------------*/
+    /*-----------Embroidery page-----------*/
+    /*-------------------------------------*/
+    #embro{
+        margin: 5% 10% 5% 5%;
+        text-align: justify;
+    }
+
+    #embro-box{
+        margin: 5% 10% 5% 10%;
+    }
+    #small-box{
+        display: inline-block;
+        text-align: center;
+        margin: 2%;
+        padding: 2%;
+        min-width: 20%;
+        background-color: #EBEBEB;
+    }
+    #small-box:hover{
+        background-color:rgba(255,255,255,0.6);
+    }
+
  	/*-------------------------------------*/
 	/*-----------Detail page---------------*/
 	/*-------------------------------------*/
@@ -1616,7 +2022,7 @@
 	{
 		height:50px;
 		background-color: #EBEBEB;
-		margin: 0px 0 30px 0;
+		margin: 10px 0 30px 0;
 		padding: 1% 0px 1% 20%;
 	}
     #detail-sec
@@ -1655,11 +2061,11 @@
 	{
         height: 50px;
         width: 50px;
-		background: #ffffff;
+        background-image: url('/img/sub-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
 		border:1px solid #CCC;
-		text-align:center;
-		color: #0f0f0f;
-        padding: 1px;
         margin-right: -4px;
 	}
 	
@@ -1667,11 +2073,11 @@
 	{
 		height: 50px;
 		width: 50px;
-		background: #ffffff;
+        background-image: url('/img/add-button.jpg');
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: center;
 		border:1px solid #CCC;
-		text-align:center;
-		color: #0f0f0f;
-		padding: 1px;
         margin-left: -4px;
         border-left-color: #0CC;
 	}
@@ -1696,6 +2102,7 @@
 		text-align:center;
         padding: 15px;
 		opacity: 0.5;
+
 	}
 
 	#cart-btn:hover
@@ -1732,7 +2139,7 @@
 	}
 
 	#all_accordion{
-		margin: 50px;
+		margin: 10px;
 	}
 
 	button.accordion {
@@ -1771,11 +2178,32 @@
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
 	}
+    #clearCart{
+        width: 130px;
+        height: 50px;
+        margin-left: 640px;
+    }
+    #proceed{
+        width: 150px;
+        height: 50px;
+        float: right;
+        background-color:#0CC;
+        color:#ffffff;
+        border:1px solid #CCC;
+        text-align:center;
+        padding: 15px;
+        opacity: 0.5;
+    }
 
+    #proceed:hover{
+        opacity: 1;
+        transition:2s;
+        background-color:#26DFD6;
+    }
     #success{
         padding: 15px;
         font-size: 20px;
-        margin: 300px;
+        margin: 10%;
     }
 	/*--------------------------------------*/
 	/*-----------Contact page--------------*/
@@ -1816,7 +2244,7 @@
 	{
 		height:50px;
 		background-color: #EBEBEB;
-		margin: 0px 0 30px 0;
+		margin: 10px 0 30px 0;
 		padding: 1% 0px 1% 20%;
 	}
 
@@ -1833,22 +2261,27 @@
 	/*------------------------------------*/
 	#checkout
 	{
-		margin:50px;
+		margin:10%;
 		height: 800px;
 
 	}
 
 	#checkout_error
 	{
-		margin: 65px;
+		margin: 30%;
 		float: none;
 	}
 
 	#checkout_page
 	{
-		padding: 100px;
+		padding: 5%;
 	}
 
+    #country{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
 
 	/*-----------------------------------*/
 	/*-----------Admin page-------------*/

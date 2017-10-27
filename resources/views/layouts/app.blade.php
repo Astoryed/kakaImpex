@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Kakaimpex') }}</title>
+    <link rel="icon" type="image/jpg" href="img/toplogo.jpg">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -19,16 +20,14 @@
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.css') }}" rel="stylesheet">
 
-
     <!-- Scripts -->
     <script src="{{asset('js/jquery-3.1.1.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
     <script src="{{asset('js/plugins.js')}}"></script>
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="{{asset('js/owl.carousel.js')}}"></script>
+
 
 
     <script>
@@ -54,7 +53,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('home') }}">
-                    <img src="/img/logomain.jpg" id="logo-main">
+                    <img src="/img/logo.jpg" id="logo-main">
                     {{--{{ config('app.name', 'Kakaimpex') }}--}}
                 </a>
             </div>
@@ -103,15 +102,7 @@
 
 <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{--<script>--}}
-        {{--$(document).ready(function () {--}}
-            {{--$('nav ul li').hover(function () {--}}
-                {{--$(this).find('ul').stop(true, false,true).fadeToggle(100);--}}
 
-
-            {{--});--}}
-        {{--});--}}
-    {{--</script>--}}
 
 </body>
 </html>

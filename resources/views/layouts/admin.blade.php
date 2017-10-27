@@ -8,7 +8,7 @@
 
     <header>
         <nav>
-            <div><a href="{{route('home')}}"><img src="/img/logomain.jpg" id="logo-main"></a>
+            <div><a href="{{route('home')}}"><img src="/img/logo.jpg" id="logo-main"></a>
 
                 <button class="nav-btn"><i class="fa fa-bars"></i></button>
             </div>

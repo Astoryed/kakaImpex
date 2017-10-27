@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div id="product-bar">
+    <div id="login-bar">
         <a href="#">Admin Login</a>
 
     </div>

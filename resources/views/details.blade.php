@@ -46,7 +46,7 @@
 
          <div id="detail-box">
              <div id="white-img">
-             <img class="img-rounded productImage" src="{{$product->photo->file}}">
+             <img width="300px" height="400px" class="img-rounded productImage" src="{{$product->photo->file}}">
              </div>
          </div>
 
@@ -56,101 +56,45 @@
             <h1>Rs {{$product->price}}</h1>
             <p>{{$product->details}}</p>
 
-            <div id="size">
-                <h3>Size
+            <form method="POST" action="{{route('addToCart', $product->id)}}" >
+                {!! csrf_field() !!}
+
+                <div id="size">
+                    <h3>Size</h3>
                     <div class="btn-group">
-                        <button type="button" class="size-btn">S</button>
-                        <button type="button" class="size-btn">L</button>
-                        <button type="button" class="size-btn">XL</button>
+                        <input name="size_btn" type="radio"  value="Small">S
+                        <input name="size_btn" type="radio"  value="Medium" checked>M
+                        <input name="size_btn" type="radio"  value="Large">L
+                        <input name="size_btn" type="radio"  value="Extra Large">XL
                     </div>
-                </h3>
-            </div>
+                </div>
 
-            <div id="quantity">
-                <h3>Quantity</h3>
+                <div id="quantity">
+                    <h3>Quantity</h3><br><br>
 
-                <div id="adjust-btns">
-
-                    <form method="POST" action="{{route('addToCart', $product->id)}}" >
-                        {!! csrf_field() !!}
-
+                    <div id="adjust-btns">
                         <input class="dec-btn" onclick="decFunction()">
 
                         <input name="qty" title="place your value" class="input-btn"
-                        readonly id="myNumber" type="number" value="1" min="1" >
+                               readonly id="myNumber" type="number" value="1" min="1" >
 
-                        <input class="inc-btn" onclick="incFunction()">
+                        <input class="inc-btn" onclick="incFunction()"><br>
+                        <button type="submit" id="cart-btn">Add To Bag</button>
 
-                            <button type="submit" id="cart-btn">Add To Bag</button>
-
-                    </form>
-
-                    {{--<button class="dec-btn" onclick="decFunction()"> - </button>--}}
-
-                        {{--<input name="$change" title="place your value" class="input-btn"--}}
-                               {{--readonly id="myNumber" type="number" value="1" min="1">--}}
-
-                    {{--<a href="#"><button class="inc-btn" onclick="incFunction()"> + </button></a>--}}
-
-                 {{--</div>--}}
-
-            {{--<a href="{{route('addToCart', $product->id)}}" ><button id="cart-btn">Add To Bag</button></a>--}}
+                    </div>
+                </div>
+            </form>
 
         </div>
 
+             </div>
+         </div>
         </div>
     </div>
-
-            <!--Sticky Slider -->
-            <!------------------>
-
-    <div id="featured">
-
-        <img src="/img/arrivals.png">
-
-    </div>
-
-
-            <div id="sticky" class="owl-carousel owl-theme">
-
-                <a href="{{route('rain')}}"><div id="shirt"><img src="/img/stuff-01.png"><p> Track Jacket</p><p> 2500 Rs</p></div></a>
-                <a href="{{route('shortSleeves')}}"><div id="shirt"><img src="/img/stuff-02.png"><p> Polo Shirt</p><p> 1500 Rs</p></div></a>
-                <a href="{{route('rain')}}"><div id="shirt"><img src="/img/stuff-03.png"><p> Red Hoddies</p><p>  3000 Rs</p></div></a>
-                <a href="{{route('shortSleeves')}}"><div id="shirt"><img src="/img/stuff-04.png"><p> Tennis Shirt</p><p>  800 Rs</p></div></a>
-                <a href="{{route('pullover')}}"><div id="shirt"><img src="img/stuff-05.png"><p> Pullover</p><p>  1000 Rs</p></div></a>
-                <a href="{{route('rain')}}"><div id="shirt"><img src="/img/stuff-06.png"><p> Bike Men Shirt</p><p>  3500 Rs</p></div></a>
-                <a href="{{route('sweatShirts')}}"><div id="shirt"><img src="/img/stuff-07.png"><p> Racing Shirt</p><p>  4000 Rs</p></div></a>
-                <a href="{{route('sleeveless')}}"><div id="shirt"><img src="/img/stuff-08.png"><p> Basket Ball Shirt</p><p>  2000 Rs</p></div></a>
-
-            </div>
-
         </div>
-    </div>
-
 
 
     <script>
-
-        $(document).ready(function() {
-
-            $('#sticky').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:3
-                    },
-                    1000:{
-                        items:4
-                    }
-                }
-            })
-        });
-
         $(document).ready(function(){
             $(".size-btn").click(function(){
                 $(this).toggleClass("black");

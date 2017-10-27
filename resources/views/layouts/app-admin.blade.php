@@ -9,6 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Kakaimpex') }}</title>
+    <link rel="icon" type="image/jpg" href="img/toplogo.jpg">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -20,22 +21,22 @@
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/jquery-countryselector.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/lightbox.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script src="{{asset('js/jquery-3.1.1.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
 
     <script>
         window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-        ]) !!};
+            'csrfToken' => csrf_token(),]) !!};
     </script>
 </head>
 <body>
-
 <div id="app">
 
     @yield('adminPanel')
@@ -51,9 +52,13 @@
 <script src="{{asset('js/vendor/bootstrap.js')}}"></script>
 <script src="{{asset('js/plugins.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
-<script src="{{asset('js/owl.carousel.js')}}"></script>
+<script src="{{asset('js/jquery.countrySelector.js') }}"></script>
+<script src="{{asset('js\lightbox-plus-jquery.min.js')}}"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+
 
 <script>
+
     $(document).ready(function () {
         $('nav ul li').hover(function () {
             $(this).find('ul').stop(true, false,true).fadeToggle(100);
@@ -74,6 +79,8 @@
             }
         }
     }
+
+
 </script>
 
 </body>

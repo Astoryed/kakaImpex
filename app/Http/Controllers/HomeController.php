@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function getAddToCart(Request $request, $id)
     {
-        session()->keep(['saved'=> $id]) ;
+//        session()->keep(['saved'=> $id]) ;
 
         $product = Product::findOrfail($id);
 
@@ -44,7 +44,9 @@ class HomeController extends Controller
 
         $qty = $request->qty;
 
-        $cart->add($product, $product->id,$qty);
+        $size = $request->size_btn;
+
+        $cart->add($product, $product->id,$qty,$size);
 
         $request->session()->put('cart', $cart);
 
@@ -98,16 +100,24 @@ class HomeController extends Controller
         return view('details',compact('product'));
     }
 
-    public function getMore($id)
+    public function getMore(Request $request,$id)
     {
         $oldCart = Session::has('cart') ? Session::get('cart') : null;
         $cart = new Cart($oldCart);
 
-        $cart->moreItem($id);
+        $product = Product::findOrfail($id);
+
+        $size = $request->size_btn;
+        if($size=== null)
+        {
+            $size = "Medium";
+        }
+
+        $cart->add($product,$product->id, $qty = '1',$size);
 
         Session::put('cart', $cart);
 
-        return redirect()->route('cart');
+        return back();
 
     }
 
@@ -121,32 +131,20 @@ class HomeController extends Controller
         if (count($cart->items) >0)
         {
             Session::put('cart', $cart);
-
-//          for session named save
-            $sum = session()->get('saved.id');
-            $sub = array_search($id,$sum);
-            unset($sum[$sub]);
-            Session::put('saved.id',$sum);
-
         }
         else{
             Session::forget('cart');
-            Session::forget('saved');
         }
 
         return redirect()->route('cart');
 
     }
 
-    public function getReduce($id)
-    {
-        $oldCart = Session::has('cart') ? Session::get('cart') : null;
-        $cart = new Cart($oldCart);
+    public function deleteCart(){
 
-        $cart->reduceItem($id);
+        Session::forget('cart');
 
-        Session::put('cart', $cart);
-        return redirect()->route('details');
+        return redirect()->route('cart');
     }
 
     public function warmupJackets()
@@ -277,14 +275,14 @@ class HomeController extends Controller
 
     public function poloUmpireShirts()
     {
-        $products =Product::where('category', 'poloUmpireShirts')->get();
+        $products =Product::where('category', 'PoloUmpireShirts')->get();
 
         return view('products',compact('products'));
     }
 
     public function baseballPants()
     {
-        $products =Product::where('category', 'baseballPants')->get();
+        $products =Product::where('category', 'BaseballPants')->get();
 
         return view('products',compact('products'));
     }
@@ -296,23 +294,47 @@ class HomeController extends Controller
         return view('products',compact('products'));
     }
 
+    public function leatherProducts()
+    {
+        $products =Product::wherein('category', ['LeatherMen','LeatherWomen'])->get();
+
+
+        return view('products',compact('products'));
+    }
+
     public function leatherMen()
     {
-        $products =Product::where('role_id',1)->get();
+        $products =Product::where('category','LeatherMen')->get();
 
         return view('products',compact('products'));
     }
 
     public function leatherWomen()
     {
-        $products =Product::where('role_id',2)->get();
+        $products =Product::where('category','LeatherWomen')->get();
+
+        return view('products',compact('products'));
+    }
+
+    public function bikersJacket()
+    {
+        $products =Product::where('category','BikersJacket')->get();
+
+        return view('products',compact('products'));
+    }
+
+    public function racingSuit()
+    {
+        $products =Product::where('category','RacingSuit')->get();
 
         return view('products',compact('products'));
     }
 
     public function newArrivals()
     {
-        $products =Product::latest()->limit(6)->get();
+//        $products =Product::latest()->limit(6)->get();
+
+        $products =Product::where('category','NewArrivals')->get();
 
         return view('products',compact('products'));
     }
@@ -367,8 +389,8 @@ class HomeController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
 
-        return view('cart', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice,]
-            ,compact('customer_id','customer_name','customer_email','orders','products'));
+        return view('order', ['products' => $cart->items, 'totalPrice' => $cart->totalPrice, 'totalQty'=>$cart->totalQty]
+            ,compact('customer_id','customer_name','customer_email','orders'));
 
     }
 

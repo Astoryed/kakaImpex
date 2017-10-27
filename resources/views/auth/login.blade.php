@@ -1,12 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="product-bar">
-        <a href="#">Login</a>
-
+    <div id="login-bar">
+        <a href="{{route('home')}}" >Login</a>
     </div>
-    <div id="login" class="animated fadeIn">
-    <div id="login-panel" class="container blur-img animated slideInUp">
+    <div id="login-panel" class="animated slideInUp">
     <div class="row">
         <div class="col-md-6 col-md-offset-6">
             <div id="contact">
@@ -72,9 +70,8 @@
     </div>
 </div>
 
-    <div id="cart-box">
-        <h3>info@kakimpex.com</h3>
-        <h3>0336-0356729</h3>
+    <div id="welcome-note">
+        <h3>info@kakaimpex.com</h3>
     </div>
 
     </div>

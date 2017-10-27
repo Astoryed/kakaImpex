@@ -29,6 +29,7 @@ class ProductRequest extends FormRequest
             'category' => 'required',
             'price'    => 'required',
             'role_id'  => 'required',
+            'photo_id' => 'required',
 
         ];
     }

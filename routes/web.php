@@ -11,17 +11,11 @@
 |
 */
 
-use App\Cart;
-use App\Product;
 use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 
-Route::get('/', function() {
-    return view('welcome');
-});
 
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
@@ -37,6 +31,16 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::get('/details/{id}', 'HomeController@details')->name('details');
 
+Route::get('/printing', 'CheckoutController@printing')->name('printing');
+
+Route::get('/embroidery', 'CheckoutController@embroidery')->name('embroidery');
+Route::get('/digital', 'CheckoutController@digital')->name('digital');
+Route::get('/screen', 'CheckoutController@screen')->name('screen');
+Route::get('/offset', 'CheckoutController@offset')->name('offset');
+Route::get('/customize', 'CheckoutController@customize')->name('customize');
+Route::get('/promotional', 'CheckoutController@promotional')->name('promotional');
+Route::get('/acrylic', 'CheckoutController@acrylic')->name('acrylic');
+
 Route::get('/cart', 'HomeController@cart')->name('cart');
 
 Route::post('/add-to-cart/{id}','HomeController@getAddToCart')->name('addToCart');
@@ -44,6 +48,8 @@ Route::post('/add-to-cart/{id}','HomeController@getAddToCart')->name('addToCart'
 Route::get('/remove/{id}','HomeController@getDelete')->name('remove');
 
 Route::get('/more/{id}','HomeController@getMore')->name('more');
+
+Route::get('/deleteCart','HomeController@deleteCart')->name('deleteCart');
 
 Route::resource('/checkout','CheckoutController');
 
@@ -53,66 +59,11 @@ Route::get('/orderSubmit', 'HomeController@orderSubmit')->name('orderSubmit');
 
 Route::get('/sendMail', 'HomeController@sendMail')->name('sendMail');
 
-Route::get('/poster', 'CheckoutController@poster');
+Route::get('/poster',function (Request $request){
 
-Route::get('/boat', 'CheckoutController@boat')->name('boat');
+    $size = $request->get('size_btn');
 
-Route::get('/postermail', 'CheckoutController@postermail')->name('postmailer');
-
-Route::post('/postUser', 'CheckoutController@postUser');
-
-Route::get('/page/{id}',function (Request $request,$id){
-
-
-//        $sum = session()->get('saved.id');
-//
-//        $sub = array_search($id,$sum);
-//
-//        unset($sum[$sub]);
-//
-//        Session::put('saved.id',$sum);
-//
-//        return $sum;
-
-    $sum = session()->get('saved.id');
-
-    if (in_array($id, $sum)) {
-
-        echo 'Done';
-    }else{
-         echo 'Not Done';
-    }
-         return $sum;
-
-
-//        array_push($cart->data_array,18);
-//        $total = ['data_array'=> $cart->data_array];
-
-
-//    $request->session()->get('cart');
-//    $total = session()->push('saved_ids.id', 3);
-//
-//        return $total;
-
-
-//        return 'nothing';
-    });
-
-Route::get('/take',function (Request $request) {
-
-//    $cart = Session::get('cart');
-//        return $cart;
-//
-//    $array = array_get($cart,'id');
-//
-//    return var_dump($cart);
-
-//    $cart = $request->session()->forget();
-
-    $cart = $request->session()->all();
-//    ['rowId' => $cart->rowId];
-    return $cart;
-
+    echo $size;
 
 });
 
@@ -158,9 +109,15 @@ Route::get('/baseballPants', 'HomeController@baseballPants')->name('baseballPant
 
 Route::get('/cyclingJerseys', 'HomeController@cyclingJerseys')->name('cyclingJerseys');
 
+Route::get('/leatherProducts', 'HomeController@leatherProducts')->name('leatherProducts');
+
 Route::get('/leatherMen', 'HomeController@leatherMen')->name('leatherMen');
 
 Route::get('/leatherWomen', 'HomeController@leatherWomen')->name('leatherWomen');
+
+Route::get('/bikersJacket', 'HomeController@bikersJacket')->name('bikersJacket');
+
+Route::get('/racingSuit', 'HomeController@racingSuit')->name('racingSuit');
 
 Route::get('/newArrivals', 'HomeController@newArrivals')->name('newArrivals');
 

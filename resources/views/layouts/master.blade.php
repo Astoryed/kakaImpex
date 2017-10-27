@@ -6,12 +6,12 @@
     <!-- ------ -->
 
     <header>
-        <nav>
-            <div><a href="{{route('home')}}"><img src="/img/logomain.jpg" id="logo-main"></a>
+            <div><a href="{{route('home')}}"><img src="/img/logo.jpg" id="logo-main"></a>
 
-                <button class="nav-btn"><i class="fa fa-bars"></i></button>
-            </div>
-
+                <button class="nav-btn" onclick="w3_open()">&#9776;</button>
+                <div id="mySidebar">
+                    <button id="nav-close" onclick="w3_close()"> &times;</button>
+                    <nav>
             <ul>
                 <li><a href="{{route('home')}}">Home</a></li>
 
@@ -46,7 +46,7 @@
                     </li>
 
                 <li>
-                    <a href="{{route('products')}}">
+                    <a href="{{route('leatherProducts')}}">
                         <div id="flash">Leather
                     <ul>
                         <li><a href="{{route('leatherMen')}}">Men</a></li>
@@ -55,33 +55,16 @@
                     </div></a>
                 </li>
 
-                <li><a href="{{route('home')}}">
+                <li><a href="{{route('printing')}}">
 
-                        <div id="flash">Printing & Advertising
-                            <ul>
-                                <li>Graphic Designing</li>
-                                <li>Advertising</li>
-                                <li>Embroidery</li>
-                                <li>Digital Printing</li>
-                                <li>Screen Printing</li>
-                                <li>Offset Printing</li>
-                                <li>Customized Gifts</li>
-                                <li>Promotional Gift</li>
-                                <li>Acrylic Signs</li>
-                                <li>Customized Uniform Production</li>
-                                <li>Plastic and Packaging</li>
-                                <li>Wedding Cards</li>
-                                <li>All Kinds of Flag Making</li>
-
-                            </ul>
-                        </div></a>
+                        <div>Printing & Advertising</div></a>
                 </li>
 
                 <li>
                     <a href="{{route('newArrivals')}}"><div id="flash">New Arrivals
                     <ul>
-                        <li><a href="{{route('rain')}}">Bikers Jacket</a></li>
-                        <li><a href="{{route('soccer')}}">Racing Suit</a></li>
+                        <li><a href="{{route('bikersJacket')}}">Bikers Jacket</a></li>
+                        <li><a href="{{route('racingSuit')}}">Racing Suit</a></li>
 
                     </ul>
                     </div></a>
@@ -114,6 +97,8 @@
                 </li>
             </ul>
         </nav>
+        </div>
+                </div>
     </header> <br><br><br><br>
 
 
@@ -128,7 +113,7 @@
     <footer>
 
         <div id="social-icons">
-            <img src="/img/logomain.jpg"><br><br>
+            <img src="/img/logo.jpg"><br><br>
 
             <i id="fb" class="fa fa-facebook fa-lg" aria-hidden="true"></i>
             <i id="you" class="fa fa-youtube fa-lg" aria-hidden="true"></i>
@@ -150,16 +135,15 @@
                 </div>
 
                 <div id="add" class="col-lg-2">
-                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i><br>
-                    +92 52 42910816<br>
-                    +92 300 6191080<br>
-                    +92 315 6191212<br>
+                    <i class="fa fa-mobile fa-2x" aria-hidden="true"></i><br><br>
+                    0335-0356729<br>
+                    0344-6376356<br>
                 </div>
 
                 <div id="add" class="col-lg-2">
                     <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i><br><br>
-                    kakaimpex@Gmail.Com<br>
-                    kakaimpex.Comsats.Net.Pk
+                    sales01@kakaimpex.com <br>
+                    sales02@kakaimpex.com
                 </div>
 
                 <div id="add" class="col-lg-2">
@@ -174,5 +158,15 @@
         <p>All Rights Reserved. Design By Astoryed</p>
 
     </footer>
+    <script>
+
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
 
 @endsection

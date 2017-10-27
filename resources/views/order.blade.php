@@ -4,7 +4,7 @@
 
     <div id="checkout_page" >
 
-        <bold class="alert-success text-center col-sm-6 col-lg-offset-3">Your Order Is Submitted Successfully</bold><br>
+            <span id="success" class="alert-success">{{session('order_submitted')}}</span><br>
 
         <h2>Order Details</h2><br>
 
@@ -45,6 +45,7 @@
                             <tbody>
                             <tr>
                                 <td>{{ $item['items']['name'] }}</td>
+                                <td>{{ $item['size'] }}</td>
                                 <td>{{ $item['qty'] }}</td>
                                 <td> {{$item['price'] }}</td>
                             </tr>

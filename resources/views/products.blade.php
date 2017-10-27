@@ -62,7 +62,7 @@
                         <p><b>{{$product->name}}</b></p>
                             <p>{{$product->price}} Rs</p>
                         <p>{{$product->details}}</p>
-                        <a href="{{route('addToCart', $product->id)}}" ><button id="send-btn">Buy Product</button></a>
+                        <a href="{{route('more', $product->id)}}" ><button id="send-btn">Buy Product</button></a>
 
                         </div>
 

@@ -15,18 +15,31 @@
         Our range of Sports Design covers Jackets, Gloves, Uniforms which are for all type of sports.
         We have professional experts holding years of experience in handwork</b></p>
 
-        <form method="POST" action="{{route('poster')}}" >
-            {!! csrf_field() !!}
+        {{--<form method="POST" action="/postUser" >--}}
+            {{--{!! csrf_field() !!}--}}
 
-            <h6>Name</h6>
-            <input name="username" value="" maxlength="16" />
+            {{--<h6>Name</h6>--}}
+            {{--<input name="username" value="" maxlength="16" />--}}
 
-            <h6>Pass</h6>
-            <input name="password" value="" maxlength="16" />
-            <input type="submit" name="submit" value="done">
+            {{--<h6>Pass</h6>--}}
+            {{--<input name="password" value="" maxlength="16" />--}}
+
+
+
+            {{--<input type="submit" name="submit" value="done">--}}
+        {{--</form>--}}
+
+      <form>
+        <input name="username" value="" maxlength="16" />
+
+
+        <input name="size_btn" type="checkbox" class="size-btn" value="small">S
+        <input name="size_btn" type="checkbox" class="size-btn" value="Large">L
+        <input name="size_btn" type="checkbox" class="size-btn" value="Extra Large">XL
+
+
+        <input type="submit" name="submit" value="done">
         </form>
-
-
     </div>
 
 @stop

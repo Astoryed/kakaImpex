@@ -40,7 +40,12 @@
                 'BaseballJerseys'=>'Baseball-Jerseys',
                 'PoloUmpireShirts'=>'PoloUmpire-Shirts',
                 'baseballPants'=>'baseball-Pants',
-                'CyclingJerseys'=>'Cycling-Jerseys'), null, ['class'=>'form-control']) !!}
+                'CyclingJerseys'=>'Cycling-Jerseys',
+                'LeatherMen'=>'Leather-Men',
+                'LeatherWomen'=>'Leather-Women',
+                'BikersJacket'=>'Bikers-Jacket',
+                'RacingSuit'=>'Racing-Suit',
+                'NewArrivals'=>'New Arrivals'), null, ['class'=>'form-control']) !!}
 
         </div>
 

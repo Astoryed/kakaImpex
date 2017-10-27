@@ -28,6 +28,7 @@
                     <thead>
                     <tr>
                         <th>Items Name</th>
+                        <th>size</th>
                         <th>Quantity</th>
                         <th>Price</th>
                     </tr>
@@ -38,6 +39,7 @@
                         <tbody>
                         <tr>
                             <td>{{ $item['items']['name'] }}</td>
+                            <td>{{$item['size'] }}</td>
                             <td>{{ $item['qty'] }}</td>
                             <td>{{$item['price'] }}</td>
                         </tr>
