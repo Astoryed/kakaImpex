@@ -28,6 +28,7 @@ class ProductRequest extends FormRequest
             'name'     => 'required',
             'category' => 'required',
             'price'    => 'required',
+            'role_id'  => 'required',
 
         ];
     }

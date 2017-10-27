@@ -2,7 +2,6 @@
 
 @section('admin')
 
-
     <div id="admin_section">
 
         <h1>Admin</h1><br><br>

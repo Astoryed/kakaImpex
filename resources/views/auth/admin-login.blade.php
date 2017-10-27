@@ -1,12 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+
+    <div id="product-bar">
+        <a href="#">Admin Login</a>
+
+    </div>
+
+    <div id="login-panel" class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Admin Login</div>
-                <div class="panel-body">
+        <div class="col-md-6 col-md-offset-6">
+            <div id="contact">
+                <h1 align="center">Admin Login</h1><br>
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('admin.login.submit') }}">
                         {{ csrf_field() }}
 
@@ -50,7 +55,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" id="send-btn">
                                     Login
                                 </button>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Admin;
+use App\Order;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -35,11 +36,19 @@ class AdminController extends Controller
         return view('admin.index',compact('admins'));
     }
 
-
-    public function customer()
+    public function order()
     {
-        $users = User::all();
+        $orders = Order::latest()->limit(100)->get();
 
-        return view('customer.index',compact('users'));
+        $orders->transform(function ($order, $key) {
+
+            $order->cart = unserialize($order->cart);
+
+            return $order;
+
+        });
+
+        return view('orders.orderlist',['orders' => $orders]);
+
     }
 }

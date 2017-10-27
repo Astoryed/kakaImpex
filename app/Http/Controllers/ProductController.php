@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\ProductRequest;
 use App\Photo;
 use App\Product;
+use App\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -35,7 +37,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        $roles = Role::pluck('title','id')->all();
+
+        return view('products.create',compact('roles'));
     }
 
     /**
@@ -62,7 +66,9 @@ class ProductController extends Controller
 
         Product::create($input);
 
-        return redirect('admin/products');
+        Session::flash('product_created','The Product has been created');
+
+        return redirect()->intended(route('products.create'));
 
     }
 
@@ -87,7 +93,9 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        return view('products.edit', compact('product'));
+        $roles = Role::pluck('title','id')->all();
+
+        return view('products.edit', compact('product','roles'));
     }
 
     /**

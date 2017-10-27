@@ -1,7 +1,7 @@
 body{
     padding: 0px;
-    margin: 50px;
-    background-image: url('/images/base3.jpg');
+    margin: 30px;
+    background-image: url('../images/base3.jpg');
     font-family: 'Marcellus SC', serif;
     font-size: 16px;
     color: white;
@@ -11,55 +11,8 @@ a{
     color: white;
 }
 
-/***********Home Page Slider*********/
-/***********************************/
-@keyframes slider {
-    0%{
-        left: 0;
-    }
-    20%{
-        left: 0;
-    }
-    25%{
-        left: -100%;
-    }
-    45%{
-        left: -100%;
-    }
-    50%{
-        left: -200%;
-    }
-    70%{
-        left: -200%;
-    }
-    75%{
-        left: -300%;
-    }
-    95%{
-        left: -300%;
-    }
-    100%{
-        left: -400%;
-    }
-}
-
-#slider{
-    overflow: hidden;
-}
-
-#slider figure img{
-    width: 20%;
-    float: left;
-}
-
-#slider figure{
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    text-align: left;
-    font-size: 0;
-    animation: 15s slider infinite;
+a:hover{
+    color: white;
 }
 
 /***********Home page*********/
@@ -70,13 +23,25 @@ a{
     padding-top: 10px;
 }
 
+#login-panel{
+    margin-top: 100px;
+    color: #2b2b2b;
+    height: 600px;
+}
+
+.blur-img{
+    background-image: url('../images/jackets.png');
+    background-repeat: no-repeat;
+
+
+}
 #login-navbar{
     height: 50px;
     background-color: black;
     text-align: center;
     font-size: 24px;
-
 }
+
 #side_bar{
     font-size: 20px;
     width:250px;
@@ -97,19 +62,8 @@ a{
 
 }
 
-#strip{
-    height: 80px;
-    text-align: center;
-    background-image: url('/images/strip.jpg');
-    padding-top: 1px;
-    box-shadow: 10px 10px 5px grey;
-    border-radius: 2px;
-    border: 2px solid black;
-    margin: 20px;
-}
-
 .jumbotron {
-    background-image: url('/images/poster4.jpg');
+    background-image: url('../images/poster4.jpg');
     background-repeat: no-repeat;
     height: 500px;
     box-shadow: 10px 10px 5px grey;
@@ -121,6 +75,72 @@ a{
     box-shadow: 10px 10px 5px grey;
 }
 
+#xtra{
+    margin: 20px;
+    padding: 20px;
+    background-color: #31b0d5;
+    text-align: center;
+}
+
+
+#photos{
+    display: flex;
+    margin-left: 100px;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+    height: 420px;
+
+}
+#photo-1{
+    background-image: url('../images/long-img1.jpg');
+    background-repeat: no-repeat;
+    width: 20%;
+    margin: 10px;
+
+}
+
+#photo-2{
+    background-image: url('../images/long-img2.jpg');
+    background-repeat: no-repeat;
+    width: 20%;
+    margin: 10px;
+}
+
+#photo-3{
+    background-image: url('../images/long-img3.jpg');
+    background-repeat: no-repeat;
+    width: 20%;
+    margin: 10px;
+}
+
+#photo-4{
+    background-image: url('../images/long-img4.jpg');
+    background-repeat: no-repeat;
+    width: 20%;
+    margin: 10px;
+}
+
+#photos p{
+    background-color: #000000;
+    padding: 4px;
+}
+
+#photos p:hover{
+    background-color: #31b0d5;
+    color: #ffffff;
+}
+
+#photos b{
+    background-color: white;
+    color: #31b0d5;
+    writing-mode: vertical-lr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: none;
+
+
+}
 
 /***********Overlay*************/
 /*******************************/
@@ -130,15 +150,15 @@ a{
 
 #jumble {
     position: relative;
-    width: 30%;
     display: inline-block;
+    margin: 30px;
 }
 
 .image {
     display: block;
     height: auto;
-    width: 250px;
-
+    width: 100%;
+    border-radius: 6px;
 }
 
 .overlay {
@@ -146,11 +166,12 @@ a{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: #31b0d5;
     overflow: hidden;
     width: 0;
     height: 100%;
     transition: .5s ease;
+    color: white;
 }
 
 #jumble:hover .overlay {
@@ -172,23 +193,29 @@ a{
 /***********Footer page*********/
 /*******************************/
 #footer_page{
-    height: 250px;
     background-color: #000;
     box-shadow: 10px 10px 5px grey;
-    margin-top: auto;
+    display: inline-block;
+    border-radius: 6px;
+
+
 }
 
 #address{
-    padding-left: 75px;
+    padding: 20px;
     float: left;
+    width: 401px;
 }
 
+#address img {
+    padding: 10px;
+}
 
 /***********Admin page*********/
 /*******************************/
 
 #admin_back{
-    background-image: url('/images/dark-bk.png');
+    background-image: url('../images/dark-bk.png');
     background-repeat: no-repeat;
     height: 700px;
     border-radius: 5px;
@@ -199,12 +226,12 @@ a{
     width: 900px;
     height: 600px;
     float: left;
-    padding: 40px;
+    padding: 30px;
     overflow-y: auto;
 }
 
 .btn1{
-    background-image: url('/images/blue-btn.png');
+    background-image: url('../images/blue-btn.png');
     width: 150px;
     height: 50px;
     border-radius: 5px;
@@ -212,7 +239,7 @@ a{
 
 
 .btn2{
-    background-image: url('/images/red-btn.png');
+    background-image: url('../images/red-btn.png');
     width: 70px;
     height: 35px;
     border-radius: 5px;
@@ -220,7 +247,7 @@ a{
 
 #sm-form{
     float: right;
-    padding-right: 200px;
+    padding-right: 50px;
 }
 
 #error_box{
@@ -237,7 +264,7 @@ a{
     position: absolute;
 }
 .top-bar ul li:hover{
-    background-color: rgba(0,0,0,0.6);
+    background-color: #31b0d5;
 }
 
 .top-bar ul li{
@@ -246,7 +273,7 @@ a{
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background-color: rgba(0,0,0,0.3);
+    background-color: #31b0d5;
     list-style: none;
 }
 
@@ -262,9 +289,9 @@ a{
 
 #products{
     margin-left: 250px;
-    margin-top: 100px;
-    height: 1200px;
-
+    padding-top: 100px;
+    height: auto;
+    padding-bottom: 100px;
 }
 
 #products img{
@@ -276,6 +303,7 @@ a{
     margin-left: 70px;
     color: black;
     position: static;
+    margin-bottom: 130px;
 }
 
 
@@ -284,28 +312,90 @@ a{
 
 #about{
     padding: 20px;
-    padding-right: 550px;
+    padding-left: 40px;
+    padding-right: 50px;
     margin-top: 100px;
-    height: 650px;
-    color: black;
-    background-image: url('/images/about-banner.jpg');
+    height: 600px;
+    background-image: url('../images/about-bg.jpg');
     background-repeat: no-repeat;
+
 }
+
+
+/***********Cart page*********/
+/******************************/
 
 #cart{
     color: black;
     text-align: center;
     height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+    padding: 100px;
 }
 
+.addProduct{
+    background-color: rgba(0,0,0,0.3);
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    float: left;
+    border-radius: 6px;
+    margin-bottom: 50px;
+    padding: 10px;
 
+}
 
+/***********Contact page*********/
+/********************************/
 
+#contact{
+    padding: 50px;
+    margin-top: 100px;
+    height: 650px;
+    background-image: url('../images/contact-bk.jpg');
+    background-repeat: no-repeat;
+}
 
+.detail {
+    margin: 100px;
+    padding-left: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
 
+}
 
+#thanks{
+    color: black;
+    text-align: center;
+    height: auto;
+    margin-bottom: 100px;
+    padding: 100px;
+}
 
+#checkout_page{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    margin-bottom: 100px;
 
+}
+#order-table{
+    width: 50%;
+}
 
+/***********Feedback page*********/
+/********************************/
+
+#feedback{
+    padding: 126px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-image: url("../images/paper1.jpg");
+    background-repeat: no-repeat;
+    color: black;
+}
+
+#feedback_form{
+    margin-left: 700px;
+    color: black;
+    font-size: 14px;
+}

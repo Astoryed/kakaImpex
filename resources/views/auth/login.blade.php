@@ -1,12 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+    <div id="product-bar">
+        <a href="#">Login</a>
+
+    </div>
+    <div id="login" class="animated fadeIn">
+    <div id="login-panel" class="container blur-img animated slideInUp">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
+        <div class="col-md-6 col-md-offset-6">
+            <div id="contact">
+                <h1 align="center">Login</h1><br>
+
+                     <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 
@@ -50,7 +56,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" id="send-btn">
                                     Login
                                 </button>
 
@@ -65,4 +71,11 @@
         </div>
     </div>
 </div>
+
+    <div id="cart-box">
+        <h3>info@kakimpex.com</h3>
+        <h3>0336-0356729</h3>
+    </div>
+
+    </div>
 @endsection
